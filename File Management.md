@@ -11,5 +11,6 @@
 	- normal files: **644**(rw-r--r--)
 - Default umask values can be changed by `umask [mask value]`. 
 
-## todo: chap.7
-todo
+## todo: from chap.7
+I've stopped this study from Sep  14, 2022.
+I'll start this study when I've got the book.
