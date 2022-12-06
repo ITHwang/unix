@@ -1,7 +1,9 @@
 ## 1. Permission Value
+
 ### 1.1. Linux System Default Permission Values
 - executable files & folders: **777**(rwxrwxrwx)
 - normal files: **666**(rw-rw-rw-)
+
 ### 1.2. Default Umask Values
 - default mask **for a non-root user** is **002**.
 	- executable files & folders: **775**(rwxrwxr-x)
@@ -11,9 +13,10 @@
 	- normal files: **644**(rw-r--r--)
 - Default umask values can be changed by `umask [mask value]`. 
 
-## todo: from chap.7
-I've stopped this study from Sep  14, 2022.
-I'll start this study when I've got the book.
+## 2. Searching
+
+
+
 
 
 
