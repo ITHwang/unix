@@ -1,0 +1,8 @@
+{
+  "enabledCssSnippets": [
+    "vim-cursor-color",
+    "vim-cursor",
+    "theme"
+  ],
+  "theme": "obsidian"
+}
