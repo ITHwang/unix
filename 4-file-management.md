@@ -15,10 +15,33 @@
 
 ## 2. Searching
 
+### 2.1. grep
+- Definition: Global Regular Expressions Print
+- Format: grep \[option\] \[pattern\] \[file name\]
+- Options
+	- -i: search both upper case letters and lower case letters.
+	- -l: print the names of files that include the pattern.
+	- -n: print row number
+	- -v: print rows that don't include the pattern.
+	- -c: print row count
+	- -w: search only pattern as a word.
 
+> UNIX uses wildcard(glob pattern) to extend file name that is slightly different from regex.
+> 
+> Therefore, wrapping regex with single or double quote helps grep understand the regex.
 
+### 2.2. find
+- format: find \[path\] \[option\] \[execution\]
+- options
+	- -name (file): if file name is (file)
+	- -type (file type): if file type is (file type)
+	- -mtime (+|-)n: last modified time of the file 
+	- -atime (+|-)n: last access time
+	- -user (loginID): if file owner name is (loginID)
+	- -size (+|-)n: if file size is higher than n or lower than n
+	- -newer (file): if the file is lastly modified after (file) was modified
+- The result of find command can be saved using **std in/out redirection**
 
-
-
-
-
+### 2.3. which
+- description: print absolute path of the command.
+- format: which (command)
