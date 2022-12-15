@@ -4,3 +4,12 @@
 
 ## 2. Types of processes
 
+### 2.1. Daemon process
+- A program that runs continuously as **a background process** executed by **unix kernel**(ex. httpd process)
+- Daemon usually waits for requests in wait status and when requests come in, daemon is alerted to provide the service.
+### 2.2. parent process
+### 2.3. child process
+
+
+
+
