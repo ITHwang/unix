@@ -51,7 +51,41 @@
 - signals
 	- -9: SIGKILL, force quit but zombie process may not die.
 	- -15(default): SIGTERM, some process may not die. 
-	
+
+## 4. Foreground & Background
+
+### 4.1. Overview
+- Shell manages processes as **jobs** which are operated <u>in foreground or background way.</u>
+- Foreground process works **serially**, whereas background process works **parallelly**.
+- Default is foreground way, background process is executed by adding "&"(ampersand) to the end of the command line.
+
+### 4.2. Job Control
+#### 4.2.1. jobs (%job number|+|-)
+- columns of `jobs`
+	1. job number
+	2. order
+		- +: latest
+		- -: just before latest
+	3. status
+		- running
+		- done: completed normally
+		- terminated: completed abnormally
+		- stopped
+	4. command
+#### 4.2.2. Placing a foreground job into the background
+1. ctrl + z: suspend the foreground job.
+2. bg (%job number): place the suspended job in the background.(default: the job whose order is +)
+#### 4.2.3. Bringing a background job to the foreground
+1. fg (%job number): reconnect the background job to the terminal.(default: the job whose order is +)
+
+> For more details about foreground and background process, [How to Foreground a Background Process in Linux](https://www.baeldung.com/linux/foreground-background-process)
+
+#### 4.2.4. nohup
+- makes the background job keep going even after logout til the job is completed.
+
+## 5. user info
+
+
 
 
 
