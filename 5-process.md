@@ -2,6 +2,8 @@
 - UNIX can execute multiple processes which are consist of **system process** and **user process**.
 - When booting UNIX, **init process**(ancestor process) is executed and then this process create other processes that are required for UNIX system.
 
+> todo: write about init process with https://www.baeldung.com/linux/differences-systemctl-service
+
 ## 2. Types of processes
 
 ### 2.1. Daemon process
