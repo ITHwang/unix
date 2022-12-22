@@ -3,7 +3,9 @@
 - When booting UNIX, **init process**(ancestor process) is executed and then this process create other processes that are required for UNIX system.
 	1. **SysVInit**: the classic initialization process in which the *service* command is used.
 	2. **SystemD**: a recent initialization system in which the *systemctl* command is used.
-	
+
+	> Initialization process can be checked using *pstree* command.
+	>
 	> For more details about initialization processes, check out https://www.baeldung.com/linux/differences-systemctl-service.
 
 ## 2. Types of processes
