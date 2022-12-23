@@ -39,3 +39,13 @@ ftp [host name]
 	- ascii: changes to ascii mode.
 	- bin: changes to binary mode.(binary is default mode.)
 	- bye: exits
+
+> Besides FTP, there are protocols for file exchange.
+> 
+> FTP: proposed over 40 years ago and vulnerable to attacks because any data sent is unencrypted.
+> 
+> FTPS(FTP-SSL and FTP Secure): an extension to the FTP which protect data as it travels over the network using SSL(secure sockets layer) and now TLS(transport layer security).
+> 
+> SFTP(SSH FTP and Secure FTP): an extension to the SSH on which all data is transferred in specially formatted packets via a single connection and is encrypted through the use of public and private keys.
+> 
+> For more details, [Understanding Key Differences Between FTP, FTPS And SFTP](https://www.jscape.com/blog/understanding-key-differences-between-ftp-ftps-and-sftp) and [ftp, ftps, sftp(ssh) 개념 정리](https://nhj12311.tistory.com/76)
