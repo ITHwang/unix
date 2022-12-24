@@ -49,3 +49,20 @@ ftp [host name]
 > SFTP(SSH FTP and Secure FTP): an extension to the SSH on which all data is transferred in specially formatted packets via a single connection and is encrypted through the use of public and private keys.
 > 
 > For more details, [Understanding Key Differences Between FTP, FTPS And SFTP](https://www.jscape.com/blog/understanding-key-differences-between-ftp-ftps-and-sftp) and [ftp, ftps, sftp(ssh) 개념 정리](https://nhj12311.tistory.com/76)
+
+## 3. /etc/services
+- description: a file which specifies the ports that the servers listen on for incoming client requests.
+- The file will typically include the service name, port/protocol, any aliases, and comments.
+- example
+```bash
+netstat         15/tcp
+qotd            17/tcp          quote
+chargen         19/tcp          ttytst source
+chargen         19/udp          ttytst source
+ftp-data        20/tcp
+ftp             21/tcp
+fsp             21/udp          fspd
+ssh             22/tcp                          # SSH Remote Login Protocol
+telnet          23/tcp
+smtp            25/tcp          mail
+```
