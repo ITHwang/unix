@@ -1,9 +1,9 @@
 ## 1. host
 
-- `hostname`: checks host name.
-- `nslookup`: searches ip address corresponding to domain name.
+- `hostname`: checks **host name**.
+- `nslookup`: searches **ip address** corresponding to domain name.
 - `ping`: checks if connected to the host.(this command may be blocked because of security)
-- `finger`: checks the personal information of local host or remote host.(this command may be blocked because of security)
+- `finger`: checks **the personal information** of local host or remote host.(this command may be blocked because of security)
 	- columns
 		1. login name
 		2. real name of user
@@ -26,16 +26,16 @@ systemctl list-unit-files | grep ftp
 ftp [host name]
 ```
 3. ftp commands
-	- cd (remote directory): moves to remote directory.
-	- !cd (local directory): moves to local directory.
-	- pwd: prints remote working directory.
-	- !pwd: prints local working directory.
-	- ls or dir: prints the list of files in remote working directory.
-	- !ls: prints the list of files in local working directory.
-	- get (remote file): brings the remote file to a local file.
-	- mget (remote files): brings multiple remote files.
-	- put (local file): sends the local file to remote.
-	- mput (local files): sends multiple local files.
+	- cd (remote directory): moves to **remote** directory.
+	- !cd (local directory): moves to **local** directory.
+	- pwd: prints **remote** working directory.
+	- !pwd: prints **local** working directory.
+	- ls or dir: prints the list of files in **remote** working directory.
+	- !ls: prints the list of files in **local** working directory.
+	- get (remote file): brings the **remote** file to a **local** file.
+	- mget (remote files): brings multiple **remote** files.
+	- put (local file): sends the **local** file to **remote**.
+	- mput (local files): sends multiple **local** files.
 	- ascii: changes to ascii mode.
 	- bin: changes to binary mode.(binary is default mode.)
 	- bye: exits
@@ -52,7 +52,7 @@ ftp [host name]
 
 ## 3. /etc/services
 - description: a file which specifies the ports that the servers listen on for incoming client requests.
-- The file will typically include the service name, port/protocol, any aliases, and comments.
+- The file will typically include <u>the service name, port/protocol, any aliases, and comments.</u>
 - example
 ```bash
 netstat         15/tcp
