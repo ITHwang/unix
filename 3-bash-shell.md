@@ -27,7 +27,7 @@
 - Environment variable can be used in a subshell as well as the shell by which the subshell inherited.
 - set: print shell variables and environment variables.
 - env: print only environment variables.
-- export: change a shell variable to a env variable.
+- export: change the shell variable to a env variable.
 - unset: release assigned variable.
 
 ## 4. Handling Bash Command
@@ -40,3 +40,14 @@
 - Actually, `~/.bash_profile` is equal to `~/.profile`, and bash shell takes `~/.bash_profile` as a priority.
 - whereas `~/.bash_profile` or `~/.profile` is executed only when user logins, `~/.bashrc` is executed only when subshell is executed.
 - Threrefore, if you want to work always in the same environment, you should put all variables into `~/.bashrc` and execute the file in `~/.bash_profile`.
+
+> todo: use case of `source`
+
+## 6. view previous commands: `history`
+- description: print previous commands with history indexes.
+- !(history index): redo the command corresponding to the history index.
+- `history | tail` and `fc -l` are alike.
+
+## 7. terminal setting: `stty`
+
+> todo: use case of `stty`
