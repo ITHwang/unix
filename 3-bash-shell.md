@@ -40,14 +40,16 @@
 - Actually, `~/.bash_profile` is equal to `~/.profile`, and bash shell takes `~/.bash_profile` as a priority.
 - whereas `~/.bash_profile` or `~/.profile` is executed only when user logins, `~/.bashrc` is executed only when subshell is executed.
 - Threrefore, if you want to work always in the same environment, you should put all variables into `~/.bashrc` and execute the file in `~/.bash_profile`.
-
-> todo: use case of `source`
+- `source {file}`: apply user start file.
 
 ## 6. view previous commands: `history`
 - description: print previous commands with history indexes.
-- !(history index): redo the command corresponding to the history index.
+- `!{history index}`: redo the command corresponding to the history index.
+- `!!`: redo the latest command.
 - `history | tail` and `fc -l` are alike.
 
 ## 7. terminal setting: `stty`
-
-> todo: use case of `stty`
+- description: set terminal option.
+- format: `stty {option} {mode}`
+- option `-a`: print all option value.
+- modes: `rows`, `eof`, `intr`, `erase`, etc.
