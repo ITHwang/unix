@@ -15,7 +15,7 @@
 
 ## 2. Searching
 
-### 2.1. grep
+### 2.1. `grep`
 - Definition: Global Regular Expressions Print
 - Format: grep \[option\] \[pattern\] \[file name\]
 - Options
@@ -30,7 +30,7 @@
 > 
 > Therefore, wrapping regex with single or double quote helps grep understand the regex.
 
-### 2.2. find
+### 2.2. `find`
 - format: find \[path\] \[option\] \[execution\]
 - options
 	- -name (file): if file name is (file)
@@ -42,6 +42,12 @@
 	- -newer (file): if the file is lastly modified after (file) was modified
 - The result of find command can be saved using **std in/out redirection**
 
-### 2.3. which
+### 2.3. `file`
+- format: `file [option] [file name]`
+- description: In addition to the function of `find`, `file` helps determine the type of a file and its data.
+
+> For more details about its options, see [Linux File Command: How to Determine File Type in Linux](https://phoenixnap.com/kb/linux-file-command)
+
+### 2.4. `which`
 - description: print absolute path of the command.
 - format: which (command)
