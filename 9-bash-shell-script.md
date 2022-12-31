@@ -25,3 +25,20 @@
 - use backtick or `$(command)`.
 
 ## 2. Handling user input
+- `read (x)`: declare user input `x` as a variable.
+- `read -p (message)`: print `message` and assign user input to the variable `REPLY`.
+
+## 3. Operator
+- statement with operators
+	- ex1. `let x=3*5`
+	- ex2. `let "a = 20"`
+	- ex3. `(( a = 30 ))`
+- expression with operators
+	- ex1. `let 3*5`
+	- ex2. `(( y < 4 && z > 73 ))`
+
+## 4. Conditional Statements
+
+### 4.1. `if` statement
+
+### 4.2. `case` statement
