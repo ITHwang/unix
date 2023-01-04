@@ -11,21 +11,31 @@
 		2. loads itself.
 		3. inserts the Linux kernel into memory.
 		4. turns over execution to the kernel.
-3. Kernel
-> todo: write it down
-4. Systemd
-> todo: write it down
+3. The kernel takes over from the boot loader and now the OS controls access to the computer resources.
+	- First, The kernel goes through the following steps:
+		1. decompress itself in place.
+		2. perform hardware checks.
+		3. gain access to vital peripheral hardware.
+		4. run the init process.
+4. Systemd, recently used init process, performs a range of tasks:
+	1. probe all remaining hardware.
+	2. mount filesystems
+	3. initiate and terminate services.
+	4. manage essential system process like user login.
+	5. run a desktop environment.
 5. Run Levels
-> todo: write down
+	- The run level stands for the current state of the operating system.
+	- Now, `.target` files replace run levels in Systemd.
+	- To check the default target, `systemctl get-default`.
+	- Each target file is interpreted as follows.
+		- `poweroff.target`, run level 0: turn off the computer.
+		- `rescue.target`, run level 1: initiate a rescue shell process.
+		- `multi-user.target`, run level 3: configure the system as a non-graphical multi-user environment.
+		- `graphical.target`, run level 5: establish a graphical multi-user interface with network services.
+		- `reboot.target`, run level 6: restart the machine.
+		- `emergency.target`: emergency run level.
 
 > For more details, [Guide to the Boot Process of a Linux System](https://www.baeldung.com/linux/boot-process)
-
-1. Turn on devices around the system.
-2. Turn on the system.
-3. BOOTPROM phase: BOOTPROM check if hardwares and devices around the system are correctly operate.(Power On Self Test)
-4. Boot Program phase: load boot program and kernel.
-5. Kernel initialization phase: initialize the kernel along with /etc/system
-6. initialization phase: init process execute rc scripts and display login window.
 
 ### 1.2. Shutdown
 
