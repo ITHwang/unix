@@ -1,4 +1,4 @@
-## 1. Booting and Shutdown
+## 1. Booting
 
 ### 1.1. Booting process
 1. BIOS(Basic Input/Output System) or UEFI(Unified Extensible Firmware Interface) runs the power-on self-test(POST).
@@ -37,14 +37,33 @@
 
 > For more details, [Guide to the Boot Process of a Linux System](https://www.baeldung.com/linux/boot-process)
 
-### 1.2. Shutdown
+## 2. Shut down and Reboot
+
+### 2.1. *shutdown*
+- without any options: power-off the machine in one minute.
+- *-r* option: reboot instead of powering off the machine.
+- *-H* option: halt the system.
+> halt: terminate all running processes and shut down all CPUs
+> 
+> power off: the same as halt, and then attempts to cut power from system.
+- schedule *shutdown*
+	- absolute time: *shutdown 09:30*
+	- relative time: *shutdown +30*
+	- immediately: *shutdown now*
+- *-c*: cancel the *shutdown* process.
+
+### 2.2. *reboot*
+### 2.3. *halt*
+### 2.4. *poweroff*
+
+> For more details, [Shut Down and Reboot Linux Systems From the Terminal](https://www.baeldung.com/linux/shutdown-reboot-from-terminal)
 
 ## 2. User Management
-### 2.1. `/etc/passwd`
-### 2.2. `useradd`
-### 2.3. `usermod`
-### 2.4. `userdel`
+### 2.1. */etc/passwd*
+### 2.2. *useradd*
+### 2.3. *usermod*
+### 2.4. *userdel*
 ## 3. Group Management
-### 3.1. `groupadd`
-### 3.2. `groupmod`
-### 3.3. `groupdel`
+### 3.1. *groupadd*
+### 3.2. *groupmod*
+### 3.3. *groupdel*
