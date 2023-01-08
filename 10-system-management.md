@@ -1,4 +1,4 @@
-## 1. Booting
+## 1. Boot
 
 ### 1.1. Booting process
 1. BIOS(Basic Input/Output System) or UEFI(Unified Extensible Firmware Interface) runs the power-on self-test(POST).
@@ -53,17 +53,39 @@
 - *-c*: cancel the *shutdown* process.
 
 ### 2.2. *reboot*
+- *reboot*
+- *halt --reboot*
+- *poweroff --reboot*
+
 ### 2.3. *halt*
+- *halt*
+- *reboot --halt*
+- *poweroff --halt*
+
 ### 2.4. *poweroff*
+- *poweroff*
+- *reboot -p*
+- *halt -p*
+
+### 2.5. *-f* option
+- All three commands support a *-f* option which do the machine forcibly.
 
 > For more details, [Shut Down and Reboot Linux Systems From the Terminal](https://www.baeldung.com/linux/shutdown-reboot-from-terminal)
 
-## 2. User Management
-### 2.1. */etc/passwd*
-### 2.2. *useradd*
-### 2.3. *usermod*
-### 2.4. *userdel*
-## 3. Group Management
-### 3.1. *groupadd*
-### 3.2. *groupmod*
-### 3.3. *groupdel*
+## 3. User Management
+
+### 3.1. */etc/passwd*
+
+### 3.2. *useradd*
+
+### 3.3. *usermod*
+
+### 3.4. *userdel*
+
+## 4. Group Management
+
+### 4.1. *groupadd*
+
+### 4.2. *groupmod*
+
+### 4.3. *groupdel*
