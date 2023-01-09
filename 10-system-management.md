@@ -75,6 +75,11 @@
 ## 3. User Management
 
 ### 3.1. */etc/passwd*
+- manage accounts.
+- Each row in the file shows a user information.
+- format: `{login ID}:{password}:{UID}:{GID}:{description}:{home directory}:{login shell}`
+- ex. *root:x:0:0:Super-User:/root:/usr/bin/bash*
+- Usually the password field is shadowed by "x" and the password is saved in */etc/shadow* only root can read.
 
 ### 3.2. *useradd*
 
