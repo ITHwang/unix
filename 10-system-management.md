@@ -82,15 +82,49 @@
 - Usually the password field is shadowed by "x" and the password is saved in */etc/shadow* only root can read.
 
 ### 3.2. *useradd*
+- format: `useradd {options} {login ID}`
+- options
+	- -u {uid}: assign UID
+	- -g {gid}: assign GID
+	- -d {dir}: assign the absolute path of the home directory.
+	- -m: create the user home directory if it not exists.
+	- -s {shell}: assign the absolute path of the login shell.
+	- -c {comment}: describe the user information.
 
 ### 3.3. *usermod*
+- format: `usermod {options} {login ID}`
+- options
+	- -u {uid}: change UID
+	- -g {gid}: change GID
+	- -d {dir}: change the absolute path of the home directory.
+	- -s {shell}: change the absolute path of the login shell.
+	- -c {comment}: describe the user information.
+	- -l {login ID}: change login ID.
 
 ### 3.4. *userdel*
+- format: `userdel {options} {login ID}`
+- options:
+	- -r: remove the user home directory.
 
 ## 4. Group Management
 
-### 4.1. *groupadd*
+### 4.1. */etc/group*
+- manage groups.
+- Each row in the file shows a group information.
+- format: `{group name}:{password}:{GID}:{the list of users in the group}`
+- ex. *root::0:root*
+- Usually the group password(second field) doesn't be used.
 
-### 4.2. *groupmod*
+### 4.2. *groupadd*
+- format: `groupadd {options} {group name}`
+- options:
+	- -g {GID}: assign a GID value.(optional)
 
-### 4.3. *groupdel*
+### 4.3. *groupmod*
+- format: `groupmod {options} {group name}`
+- options:
+	- -g {GID}: change the GID value.
+	- -n {new group name}: change the group name.
+
+### 4.4. *groupdel*
+- format: `groupdel {group name}`
