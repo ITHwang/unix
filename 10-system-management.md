@@ -1,30 +1,30 @@
 ## 1. Boot
 
 ### 1.1. Booting process
-1. BIOS(Basic Input/Output System) or UEFI(Unified Extensible Firmware Interface) runs the power-on self-test(POST).
+1. **BIOS**(Basic Input/Output System) or **UEFI**(Unified Extensible Firmware Interface) runs the power-on self-test(**POST**).
 	- verify the hardware components and peripherals.
 	- carry out tests to ensure that the computer is in proper working condition.
-2. The BIOS/UEFI selects a boot device, in the first sector of which the boot loader located.
-	- The boot loader is a small program that loads the operating system.
-	- GRUB2, the most widely used boot loader, 
+2. The BIOS/UEFI selects **a boot device**, <u>in the first sector of which <b>the boot loader</b> located.</u>
+	- **The boot loader** is a small program that loads the operating system.
+	- **GRUB2**, the most widely used boot loader, 
 		1. takes over from BIOS or UEFI  at boot time.
 		2. loads itself.
-		3. inserts the Linux kernel into memory.
+		3. inserts **the Linux kernel** into memory.
 		4. turns over execution to the kernel.
-3. The kernel takes over from the boot loader and now the OS controls access to the computer resources.
+3. The kernel takes over from the boot loader and <u>now the OS controls access to the computer resources.</u>
 	- First, The kernel goes through the following steps:
 		1. decompress itself in place.
 		2. perform hardware checks.
 		3. gain access to vital peripheral hardware.
-		4. run the init process.
-4. Systemd, recently used init process, performs a range of tasks:
+		4. run **the init process**.
+4. **Systemd**, recently used init process, performs a range of tasks:
 	1. probe all remaining hardware.
-	2. mount filesystems
+	2. mount **filesystems**
 	3. initiate and terminate services.
-	4. manage essential system process like user login.
+	4. manage essential system process like **user login**.
 	5. run a desktop environment.
 5. Run Levels
-	- The run level stands for the current state of the operating system.
+	- **The run level** stands for the current state of the operating system.
 	- Now, `.target` files replace run levels in Systemd.
 	- To check the default target, `systemctl get-default`.
 	- Each target file is interpreted as follows.
@@ -40,12 +40,12 @@
 ## 2. Shut down and Reboot
 
 ### 2.1. *shutdown*
-- without any options: power-off the machine in one minute.
-- *-r* option: reboot instead of powering off the machine.
-- *-H* option: halt the system.
+- without any options: **power-off** the machine in one minute.
+- *-r* option: **reboot** instead of powering off the machine.
+- *-H* option: **halt** the system.
 > halt: terminate all running processes and shut down all CPUs
 > 
-> power off: the same as halt, and then attempts to cut power from system.
+> power off: the same as halt, and then <u>attempts to cut power from system.</u>
 - schedule *shutdown*
 	- absolute time: *shutdown 09:30*
 	- relative time: *shutdown +30*
@@ -68,7 +68,7 @@
 - *halt -p*
 
 ### 2.5. *-f* option
-- All three commands support a *-f* option which do the machine forcibly.
+- All three commands support a *-f* option which do the machine **forcibly.**
 
 > For more details, [Shut Down and Reboot Linux Systems From the Terminal](https://www.baeldung.com/linux/shutdown-reboot-from-terminal)
 
@@ -86,9 +86,9 @@
 - options
 	- -u {uid}: assign UID
 	- -g {gid}: assign GID
-	- -d {dir}: assign the absolute path of the home directory.
-	- -m: create the user home directory if it not exists.
-	- -s {shell}: assign the absolute path of the login shell.
+	- -d {dir}: assign the absolute path of **the home directory.**
+	- -m: create **the user home directory** if it not exists.
+	- -s {shell}: assign the absolute path of **the login shell.**
 	- -c {comment}: describe the user information.
 
 ### 3.3. *usermod*
@@ -96,10 +96,10 @@
 - options
 	- -u {uid}: change UID
 	- -g {gid}: change GID
-	- -d {dir}: change the absolute path of the home directory.
-	- -s {shell}: change the absolute path of the login shell.
+	- -d {dir}: change the absolute path of **the home directory.**
+	- -s {shell}: change the absolute path of **the login shell.**
 	- -c {comment}: describe the user information.
-	- -l {login ID}: change login ID.
+	- -l {login ID}: change **login ID**.
 
 ### 3.4. *userdel*
 - format: `userdel {options} {login ID}`
